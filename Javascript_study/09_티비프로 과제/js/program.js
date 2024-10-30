@@ -13,7 +13,7 @@ const popularprogram = async (url) => {
     try {
         const response = await fetch(url, options)
         const data = await response.json()
-        console.log(data)
+        //console.log(data)
 
         const results = data.results
         const container = document.querySelector('main .container')

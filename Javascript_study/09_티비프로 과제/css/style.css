@@ -77,6 +77,10 @@ main .container .card-season{
     text-align: center;
 }
 
+.nav-item:hover{
+    text-decoration: underline;
+}
+
 
 /*footer*/
 
@@ -90,19 +94,17 @@ footer {
 @media (min-width:576px) and (max-width:767px) {
 
     .col-sm-3 {
-        width: 40%;
-    }
-
-    main .container ul.program-info {
-        display: initial;
-        /*flex 해제*/
+        width: 50%;
     }
 
     main .container ul.program-info li {
         padding: 10px;
     }
 
-    main .container .col-sm-9 {
-        width: 100%;
+    main .container .col-md-3{
+        width: 40%;
+    }
+    main .container .col-md-9 {
+        width: 60%;
     }
 }

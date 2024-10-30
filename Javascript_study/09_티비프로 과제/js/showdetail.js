@@ -26,7 +26,7 @@ const programDetail = async (urlDetail) => {
         const response = await (fetch(urlDetail, options))
         const data = await response.json()
 
-        console.log(data)
+        //console.log(data)
 
         const imgSrc = `https://image.tmdb.org/t/p/w300${data.poster_path}`
 
@@ -38,8 +38,8 @@ const programDetail = async (urlDetail) => {
                     <div class="col-md-9 program-name">
                         <h2 style="margin-top:40px;">${data.name}</h2>
                         <ul class ="program-info">
-                            <li>원제${data.original_name}</li>
-                            <li>평점${data.vote_average} </li>
+                            <li>원제:${data.original_name}</li>
+                            <li>평점:${data.vote_average} </li>
                             <li>처음방영일:${data.first_air_date} </li>
                             <li>최근방영일:${data.last_air_date} </li>
                         </ul>
@@ -56,27 +56,58 @@ const programDetail = async (urlDetail) => {
 
 programDetail(urlDetail)
 
+
+
 //시즌 정보 바인딩
 const program_seaseon = async (urlDetail) => {
     try {
        const response = await fetch(urlDetail, options)
         const data = await response.json()
 
-        let season_rowHtml = '<div class = "row", style="margin-top: 30px";>'  
+        console.log(data)
 
+                    //내비게이션 부트스트랩
+                    const navigation  = `<ul class="nav nav-tabs" style="margin-top: 30px";>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">시즌</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">관련 프로</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">후기</a>
+                    </li>
+                    </ul>`
+
+        let season_rowHtml = navigation + '<div class = "row", style="margin-top: 30px";>'  
+
+        //시즌 각각 갯수대로 출력하는 반복문
         for (let i = 0; i < data.seasons.length; i++) { 
+        
+            
 
+            //시즌별 이미지 출력
+             let season_img = !data.seasons[i].poster_path ? `./images/person.png`: `https://image.tmdb.org/t/p/w200${data.seasons[i].poster_path}`
 
+            //시즌제 시즌정보 출력 
              let seasons = data.seasons.map((season) => {
-            return `${season.name} (평점: ${!season.vote_average? '미반영':season.vote_average})
+            return `${season.name}<br/>(평점: ${!season.vote_average? '미반영':season.vote_average})<br/>
             보러가기 - ${!season.air_date?'기재 요망':season.air_date} 방영`
              })
             
-               season_rowHtml += `<div col-md-3 p-3 m-20" >
-                                     <p class="card-season">${seasons[i]}</p>   
-                                 </div>`
-        
-        }
+                    season_rowHtml +=`
+                    <div class='col-md-2 p-3'>
+                        <div class="card">
+                             <img src="${season_img}"
+                         class="card-img-top"
+                         alt="${data.seasons[i].name}">
+                        <div class="card-body">
+                  <p class="card-text">${seasons[i]}</p>
+                        </div>
+                    </div>
+                </div>`
+    
+    }
         
         season_rowHtml += '</div>'
 
