@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <div id="container"></div>
+
+      <script>
+         //작성
+         const p = document.createElement('p') //p태그 생성
+         p.textContent = '안녕하세요'
+         p.style.color='red'
+         p.style.fontWeight = 'bold'
+         //스타일
+
+         const div=document.querySelector('#container')
+         div.appendChild(p)
+         //div 안 자식태그로 만들기
+      </script>
+   </body>
+</html>

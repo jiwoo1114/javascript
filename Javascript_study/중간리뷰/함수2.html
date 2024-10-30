@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const array1 = ['a','b','c']
+
+        array1.forEach((value,index) => console.log(value,index))
+
+        const words = ['옷장','컴퓨터','식기세척기','텔레비전']
+
+        const result=words.filter((word,idx,arr) =>{
+            //리턴문이 true일 때 해당 word 데이터를 result에 저장
+            return word.length >= 4 //4글자 이상 단어만 출력해 result에 저장
+        }).forEach((word)=>{
+            console.log(word) //배열에서 하나씩 뽑아와 출력
+        })
+
+        console.log(result) //항상 결과를 대괄호 배열식으로 씌읨
+
+        const array2 = [1,4,9,16]
+
+        const result2 = array2.map((value) =>{
+            return value * 2
+        })
+         console.log(result2)
+         
+         //지역변수와 전역변수
+         //지역변수는 해당 함수 외부에서 사용 불가능,전역변수는 끌어다 함수 내부에서 사용가능
+    </script>
+</body>
+</html>

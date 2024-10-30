@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //매개변수 a와 b를 받아서 더하는 함수
+        //3가지 방법으로 정의
+        
+       /* function add(a,b){
+            return a+b
+        }
+        console.log(add(2,3))
+
+        const add = function(a,b){
+            return a+b 
+        }
+
+        const add = (a,b) => {
+            return a+b
+        }
+
+        const add = (a,b) => a+b //실행코드 한 줄 일 땐 중괄호 생략 가능
+        //리턴값이 하나 일 땐 retrun 생략*/
+
+
+        //콜백함수 (매개변수 안에 함수)
+        function printNumber(num,callback){
+            console.log('printNumber() 함수의 num:', num)
+            callback(num)
+        }
+
+        printNumber(5,(num) => {
+            console.log('num * num:', num * num)
+        })
+
+        //분리
+        const test = (num) =>{
+            console.log('num * num:', num * num)
+        }
+
+        printNumber(5,test)
+        printNumber(5, test)
+
+    </script>
+</body>
+</html>

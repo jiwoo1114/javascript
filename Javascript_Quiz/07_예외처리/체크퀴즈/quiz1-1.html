@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //let str = null
+         //console.log(str.length)
+         //11열에서 예외발생,예외 이유:srt이 빈문자열(null)인데 str의 길이를 출력하려 해서 오류발생
+
+         try{
+            let str = null
+            console.log(str.length)
+         } catch(error){
+            alert('str값은 사용할 수 없습니다')
+         }
+      </script>
+   </body>
+</html>

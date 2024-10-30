@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         //콜백함수란? 함수의 매개변수로 호출되는 함수 -> 콜백함수를 이용해서 비동기 작업 후 특정 작업을 수행하도록 해준다.
+         console.log('안녕하세요')
+
+         function Newjeans(callback){
+         setTimeout(() => {
+            console.log('저는')//1초뒤에
+            callback() //하니입니다
+         }, 1000)
+      }
+
+      //나중에 실행시키고 싶은 코드롤 콜백함수로  전달
+      Newjeans(()=>{
+         console.log('하니입니다.')
+      })
+       
+      </script>
+   </body>
+</html>
+\

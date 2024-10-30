@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [1,2,3,4,5]
+        //짝수요소만 출력 후 제곱을 한다.
+
+    var result = numbers.filter((value) => value % 2 ===0) //짝수요소만 출력 
+    .map((value) => value * value) //제곱을 함 
+    .forEach((value)=>console.log(value)) //배열식 출력에서 요소 뽑아쓰기
+
+    console.log(result)
+    </script>
+</body>
+</html>

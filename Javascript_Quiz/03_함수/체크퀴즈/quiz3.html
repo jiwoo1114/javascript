@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function employee(name) {
+            if (name == '김하나') {
+               return
+            }
+            console.log(`${name}은 관리부 직원 입니다.`)
+         }
+         //김지영은 관리부직원입니다. 안상준은 관리부 직원입니다 출력
+         //리턴문을 만나 김하나는 출력 x
+         employee('김지영')
+         employee('안상준')
+         employee('김하나')
+      </script>
+   </body>
+</html>

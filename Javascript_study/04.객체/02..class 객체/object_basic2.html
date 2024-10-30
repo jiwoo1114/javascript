@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //car 객체
+        function car(color,seater){
+            //function 명은 무조건 대문자
+            this.color = color
+            this.seater = seater
+        }
+
+        car.prototype.run = function(status){
+            if(status){
+                return '자동차가 멈춥니다.'
+            }
+        }
+
+          const mycar1 = new car('블랙', 4) 
+
+            console.log(mycar1.color)
+            console.log(mycar1.seater)
+            console.log(mycar1.run(true))
+            console.log(mycar1.stop(true))
+    </script>
+</body>
+</html>

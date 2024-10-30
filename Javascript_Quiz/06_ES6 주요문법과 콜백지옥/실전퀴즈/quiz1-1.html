@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         console.log('안녕하세요')
+
+         /*setTimeout(() => {
+            console.log('저는')
+         }, 1000)
+
+         console.log('하니입니다.')*/
+
+         function Newjeans(){
+            //Promisㄷ 객체 무조건 리턴 
+            return new Promise((resolve) =>{
+               //비동기를 유발하는 코드 작성. -> 비동기 코드를 실행후에 동기적으로 바꿔줌(then)
+               setTimeout(()=>{
+                  console.log('저는')
+                  resolve('하니입니다') //'하니입니다' 값 저장 후 then에 전송
+               })
+            })
+         }
+
+         Newjeans()
+         .then((result)=>{ //result = resolve에 저장되어 전달 된 '하니입니다'
+            console.log(result)
+         })
+      </script>
+   </body>
+</html>

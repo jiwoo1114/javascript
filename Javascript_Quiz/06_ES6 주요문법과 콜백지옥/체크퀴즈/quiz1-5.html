@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const originalArray = [1, 2, 3]
+         const copiedArray = [...originalArray]
+         copiedArray.push(4)
+         //얕은복사를 시행했기에 두 변수가 같은메모리 주소를 가지고 있다.
+         //스택에서는 주소가 저장이 되어있고 실제 값은 메모리 주소를 따라 힙으로 가야 해당 주소에 저장이 되어있다
+         //그래서 originalArray에도 4가 나온다.
+         console.log(originalArray) 
+         console.log(copiedArray)
+      </script>
+   </body>
+</html>

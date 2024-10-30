@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function test(arr){
+          if(arr[0 !== undefined]) //arr의 0번 인덱스가 빈 요소가 아닐 때 0번 인덱스 value 출력
+          { console.log(arr[0]) }  
+        else{
+            //오류가 날 시 에러창 발생
+            throw new Error('베열의 0번 인덱스를 지원하지 않습니다')
+        }
+        }
+
+        try{
+            test([]) //빈배열을 매개변수로 전달
+        } catch(exception){
+            console.log(exception)
+        } //throw의 에러창 받아주기
+       
+
+        console.log('완료!')
+    </script>
+</body>
+</html>

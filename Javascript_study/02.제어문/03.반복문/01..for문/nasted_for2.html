@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let output = ''
+
+        for(let i = 1; i < 5; i++){ //i가 5보다 작으면 i 1씩 증가,안의 for문 증가
+            for(let j = 0; j < i; j++){ //i문이 true일 때 발생 j가 i보다 작을 시 j 증가, output 요소에 * 생성
+                output += '*'
+            }
+
+            output += '\n' //줄바꿈
+
+        }
+
+        console.log(output)
+    </script>
+</body>
+</html>

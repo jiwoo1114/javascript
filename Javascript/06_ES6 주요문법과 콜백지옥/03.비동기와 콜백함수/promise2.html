@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <script>
+         /* promise: 비동기 작업을 처리하고 그 결과를 나중에 사용할 수 있도록 하는 객체 */
+         function asyncTask() {
+            return new Promise((resolve, reject) => {
+               setTimeout(() => {
+                  console.log('Task done')
+                  resolve('Task result')
+               }, 1000)
+            })
+         }
+
+         asyncTask()
+            .then((result) => {
+               console.log(result)
+               return result + ' next'
+            })
+            .then((result) => {
+               console.log(result)
+            })
+            .catch((error) => {
+               console.error(error)
+            })
+
+         console.log('Task out')
+      </script>
+   </head>
+   <body></body>
+</html>

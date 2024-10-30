@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <script>
+         const str = '11.3345'
+
+         console.log(str.toFixed(2))
+
+         if(isNaN(str)) {
+            console.log('숫자가 아닙니다') //숫자가 아니면 '숫자가 아닙니다 출력'
+         } else{ 
+            console.log(`${Number(str).toFixed(0)}`) //숫자면 소수점을 없애고 숫자열로 출력
+            
+         }
+      </script>
+   </head>
+   <body></body>
+</html>

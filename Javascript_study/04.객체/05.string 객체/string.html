@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var t = 'Hello Thank you good luck to you'
+
+        for (i in t){
+            document.write(`${t[i]}: [${i}]<br>`)
+        }
+
+        //해당 인덱스에 있는 문자
+        console.log(t.charAT(16))
+        //찾는 문자가 있는 인덱스 번호
+        console.log(t.indexOF('you'))
+        console.log(t.indexOF('you',16))
+
+        console.log('')
+        //찾는 문자가 있는 인덱스 번호
+        console.log(t.search('you'))
+        //문자열을 잘라낸다 substring(시작인덱스,끝 인덱스 직전)
+        console.log(t.substring(6,12))
+
+        console.log('')
+        console.log(t.replace('you','me'))
+
+        var s = t.split('')
+
+        console.log(s)
+
+    </script>
+</body>
+</html>

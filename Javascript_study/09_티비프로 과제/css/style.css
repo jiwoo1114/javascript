@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+
+/*초기화 css*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+}
+
+
+/*main*/
+
+/*줄거리 말줄임표*/
+main .container .row .card-overview{ 
+    width: 100%;
+        /* 필요한 너비를 설정(필수) */
+        white-space: nowrap;
+        /* 텍스트가 줄 바꿈되지 않도록 설정(필수) */
+        overflow: hidden;
+        /* 넘치는 텍스트를 숨김(필수) */
+        text-overflow: ellipsis;
+        /* 넘치는 텍스트를 말줄임표로 표시(필수) */
+        padding: 5px;
+}
+
+/*카드 비율 맞추기*/
+
+main .container .row .card{
+    height: 100%;
+}
+
+main .container .row .card a {
+    height: 80%;
+}
+
+main .container .row .card img {
+    height: 100%;
+    object-fit: cover;
+    /*이미지를 높이에 맞추고 너비를 자동으로 조절(이미지 비율 무시)*/
+}
+
+
+/*detail*/
+
+main .container{padding-top: 30px;}
+
+main .container ul.program-info,
+main .container .program-name p{
+    margin-top: 40px;
+}
+
+.card-body > p {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+main .container .card-season{
+    text-align: center;
+}
+
+
+/*footer*/
+
+footer {
+    height: 100px;
+    line-height: 100px;
+    background-color: #f2f2f2;
+}
+/*반응형 UI 문제 해결 */
+
+@media (min-width:576px) and (max-width:767px) {
+
+    .col-sm-3 {
+        width: 40%;
+    }
+
+    main .container ul.program-info {
+        display: initial;
+        /*flex 해제*/
+    }
+
+    main .container ul.program-info li {
+        padding: 10px;
+    }
+
+    main .container .col-sm-9 {
+        width: 100%;
+    }
+}

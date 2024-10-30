@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <script>
+         const arr = [
+            {
+               name: '김은아',
+               grade: 'A+',
+               age: 22,
+               email: 'kea@student.com',
+            },
+            {
+               name: '장수민',
+               grade: 'B+',
+               age: 21,
+               email: 'zsm@student.com',
+            },
+            {
+               name: '서우혁',
+               grade: 'A',
+               age: 23,
+               email: 'suh@student.com',
+            },
+            {
+               name: '이수훈',
+               grade: 'F',
+               age: 23,
+               email: 'lsh@student.com',
+            },
+         ]
+
+         const inputName = prompt('학생 이름 입력')
+   
+         const result = arr.filter((student)=>{
+            return student.name == inputName 
+            //입력한 이름의 값이 student의 name값과 같을 떄
+            //filter는 true일 때만 return 값 출력
+         }).map((student)=>{
+            document.write(`${student.name},${student.grade},${student.email}`)
+         })
+      </script>
+   </head>
+   <body></body>
+</html>

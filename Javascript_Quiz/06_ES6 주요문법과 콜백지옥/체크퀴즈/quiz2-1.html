@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         console.log('안녕하세요')
+
+         setTimeout(() => {
+            console.log('저는')
+         }, 1000)
+
+         console.log('하니입니다.')
+         //동기는 코드가 무조건 작성된 순서대로 작동되는 것 (위에서 밑으로),한 작업이 완료되기 전 까지 다음 작업 x
+         //비동기는 작성된 순서 상관없이 시행되는 것을 뜻함.
+
+         //주어진코드는 먼저 작성된 제일 위의 안녕하세요를 먼저 출력 후, 그 밑의 저는이 아니라 하니입니다를 출력한다. 이유는 '저는'이 setTimeout 함수로 1초 후에 출력이 되어있도록 설정되어있어 다른 코드 출력 후 1초 후 맨 마지막에 출력이 되게 짜여있기 때문이다.
+      </script>
+   </body>
+</html>

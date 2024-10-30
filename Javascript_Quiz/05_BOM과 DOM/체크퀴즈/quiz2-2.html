@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <input type="text" id="myInput" placeholder="텍스트를 입력하세요" />
+      <p></p>
+      <script>
+         const input = document.querySelector('input')
+         const text =  document.querySelector('p')
+
+         input.addEventListener('keydown',(event)=>{
+            const value = event.target.value 
+            text.textContent = `입력:${value}`
+         })
+      </script>
+   </body>
+</html>

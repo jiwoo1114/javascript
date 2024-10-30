@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <button type="button" class="btn">버튼</button>
+
+      <script>
+         /* 콜백함수 예시1- 이벤트 */
+         const button = document.querySelector('.btn')
+
+         button.addEventListener('click', (e) => {
+            alert('이벤트 발생')
+         })
+
+         /* 콜백함수예시 2 */
+         //콜백함수 선언
+         function add(x, callback) {
+            let sum = x + x
+            console.log(sum)
+            callback(sum)
+         }
+
+         add(2, (res) => {
+            console.log('finish: ' + res)
+         })
+      </script>
+   </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const height = 180
+         const weight = 80
+
+         //적정 몸무게 계산식:(신장-100)*0.9
+         //체질량 지수 BMi 계산식 (체중)/신장*신장/10000)
+
+         //적정 몸무게 구하는 함수
+         function weightAVg(height){
+            return (height -100) *0.9
+         }
+
+         function bmi(height,weight){
+            const bmi = weight / ((height * height)/ 10000)
+            const result = ''
+
+            if (bmi >= 40){
+              const result = '고도비만'
+            } else if(bmi >= 30){
+              const result = '비만'
+            } else if(bmi > 25){
+               const result ='과체중'
+            } else if(bmi > 20){
+                const result = '정상'
+            } else{ const result = '저체중'
+
+            }
+
+
+               return result
+         }
+
+         document.write(`${weightAVg(height) } ${bmi(height, weight) }`)
+         //적정 몸무게 구하는 함수
+   
+      </script>
+   </body>
+</html>

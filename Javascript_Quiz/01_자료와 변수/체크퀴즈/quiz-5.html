@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const a = 1
+         const b = '1'
+         const c = null
+         const d = ''
+         const e = 76
+
+         console.log(e >= 70 && e <= 100) //둘 다 true여서 and 비교연산자로 true 출력
+         console.log(!c)
+         //원래는 null이어서 false인데 !을 붙혀 값을 반대로 바꿔 줌 true 출력
+         console.log(a === b)
+         //a랑 b는 값은 같지만 타입이 숫자,문자로 달라 false 나옴
+         console.log(a < -1 || e < 10)
+         //false or flase 여서 false 출력
+         console.log((Boolean(d) || Boolean(e)) && a > 10)
+         //빈문자열 타입은 false or 0을 제외한 숫자열의 타입은 true =true
+         //true and 1 > 10은 false
+         // true and false니 값은 false가 나옴.
+      </script>
+   </body>
+</html>

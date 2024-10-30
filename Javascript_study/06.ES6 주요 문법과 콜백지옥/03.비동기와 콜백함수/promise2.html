@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function asyncTask(){
+         
+                //Promise 객체를 리턴
+                return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log('Task done')
+                    resolve('Task result')
+                }, 1000)
+            })
+
+        }
+
+        asyncTask()
+        .then((result) =>{
+            console.log(result)
+            return result + 'next' //다음 then으로 값을 전달한다. 
+        })
+        .then((result)=>{
+            console.log(result)
+        })
+
+    
+
+    console.log('Task out')
+    </script>
+</body>
+</html>
